@@ -51,18 +51,10 @@ midImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
 
 //Nav
-let services = document.getElementsByTagName("a")[0];
-services.innerHTML = "Services";
-let product = document.getElementsByTagName("a")[1];
-product.innerHTML = "Product";
-let vision = document.getElementsByTagName("a")[2];
-vision.innerHTML = "Vision";
-let features = document.getElementsByTagName("a")[3];
-features.innerHTML = "Features";
-let about = document.getElementsByTagName("a")[4];
-about.innerHTML = "About"
-let contact = document.getElementsByTagName("a")[5];
-contact.innerHTML = "Contact";
+const nav1 = document.querySelectorAll("nav a");
+nav1.forEach((value, index) => {
+value.innerHTML  = siteContent.nav[`nav-item-${index + 1}`]
+});
 
 // CTA
 
@@ -99,31 +91,24 @@ contactH4.innerHTML = siteContent['contact']['contact-h4'];
 let contactAddress = document.querySelector('.contact p');
 contactAddress.innerHTML = siteContent['contact']['address'];
 
-let contactPhone = document.querySelector('.contact p');
+let contactPhone = document.querySelector('.contact p:nth-child(3)');
 contactPhone.innerHTML = siteContent['contact']['phone'];
 
-let contactEmail = document.querySelector('.contact p');
+let contactEmail = document.querySelector('.contact p:nth-child(4)');
 contactEmail.innerHTML = siteContent['contact']['email'];
 
-/*
 
-
-
-let contactH4 = document.getElementsByTagName('h4')[5];
-contactH4.innerHTML = "Contact";
-let address = document.getElementsByTagName('p')[5];
-address.innerHTML = "123 Way 456 Street Somewhere, USA";
-let phone = document.getElementsByTagName('p')[6];
-phone.innerHTML = "1 (888) 888-8888";
-let email = document.getElementsByTagName('p')[7];
-email.innerHTML = "sales@greatidea.io";
-*/
 
 
 
 //footer
-let footer = document.getElementsByTagName('p')[8];
-footer.innerHTML = "Copyright Great Idea! 2018"
+
+let footer = document.querySelector('footer p');
+footer.innerHTML = siteContent['footer']['copyright'];
+
+
+
+
 
 //green nav links
 let navigation = document.querySelectorAll("a");
