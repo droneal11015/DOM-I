@@ -63,11 +63,11 @@ contact.innerHTML = "Contact";
 
 // Mid area
 
-let h1Message = document.getElementsByTagName("h1")[0];
-h1Message.innerHTML = "DOM is Awesome!";
+let h1Message = document.querySelector('.cta-text h1');
+h1Message.innerHTML = siteContent['cta']['h1']; 
 
-let button = document.getElementsByTagName("button")[0];
-button.innerHTML = "Get Started";
+let ctaButton =  document.querySelector('.cta-text button');
+ctaButton.innerHTML = siteContent['cta']['button'];
 
 //Main content 
 let featuresH4 = document.getElementsByTagName('h4')[0];
