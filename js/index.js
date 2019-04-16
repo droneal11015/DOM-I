@@ -46,9 +46,9 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 let ctaLogo = document.getElementById("cta-img");
 ctaLogo.setAttribute('src', siteContent["cta"]["img-src"])
 
-// this code breaks the page, unsure why, have the correct class/ id but it's still not working 
 let midImg = document.getElementById("middle-img");
 midImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
 
 //Nav
 let services = document.getElementsByTagName("a")[0];
@@ -93,6 +93,21 @@ textContentP[4].innerHTML = siteContent['main-content']["vision-content"]
 
 
 //Contact info
+let contactH4 = document.querySelector('.contact h4');
+contactH4.innerHTML = siteContent['contact']['contact-h4']; 
+
+let contactAddress = document.querySelector('.contact p');
+contactAddress.innerHTML = siteContent['contact']['address'];
+
+let contactPhone = document.querySelector('.contact p');
+contactPhone.innerHTML = siteContent['contact']['phone'];
+
+let contactEmail = document.querySelector('.contact p');
+contactEmail.innerHTML = siteContent['contact']['email'];
+
+/*
+
+
 
 let contactH4 = document.getElementsByTagName('h4')[5];
 contactH4.innerHTML = "Contact";
@@ -102,6 +117,9 @@ let phone = document.getElementsByTagName('p')[6];
 phone.innerHTML = "1 (888) 888-8888";
 let email = document.getElementsByTagName('p')[7];
 email.innerHTML = "sales@greatidea.io";
+*/
+
+
 
 //footer
 let footer = document.getElementsByTagName('p')[8];
