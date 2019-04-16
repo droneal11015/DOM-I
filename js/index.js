@@ -51,8 +51,8 @@ midImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
 
 //Nav
-const nav1 = document.querySelectorAll("nav a");
-nav1.forEach((value, index) => {
+const navContent = document.querySelectorAll("nav a");
+navContent.forEach((value, index) => {
 value.innerHTML  = siteContent.nav[`nav-item-${index + 1}`]
 });
 
@@ -96,7 +96,6 @@ contactPhone.innerHTML = siteContent['contact']['phone'];
 
 let contactEmail = document.querySelector('.contact p:nth-child(4)');
 contactEmail.innerHTML = siteContent['contact']['email'];
-
 
 
 
