@@ -42,8 +42,13 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 //Images
-let headerImg = document.getElementById("cta-img");
-headerImg.setAttribute("src", "img/header-img.png")
+
+let ctaLogo = document.getElementById("cta-img");
+ctaLogo.setAttribute('src', siteContent["cta"]["img-src"])
+
+// this code breaks the page, unsure why, have the correct class/ id but it's still not working 
+//let midImg = document.getElementById("middle-img");
+//midImg.setAttribute('src', siteContent["middle-img"]["img-src"])
 
 let middleImg = document.getElementById("middle-img");
 middleImg.setAttribute("src", "img/mid-page-accent.jpg")
