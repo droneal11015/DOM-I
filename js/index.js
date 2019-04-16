@@ -41,6 +41,7 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+//Images
 let headerImg = document.getElementById("cta-img");
 headerImg.setAttribute("src", "img/header-img.png")
 
@@ -61,7 +62,7 @@ about.innerHTML = "About"
 let contact = document.getElementsByTagName("a")[5];
 contact.innerHTML = "Contact";
 
-// Mid area
+// CTA
 
 let h1Message = document.querySelector('.cta-text h1');
 h1Message.innerHTML = siteContent['cta']['h1']; 
@@ -70,26 +71,24 @@ let ctaButton =  document.querySelector('.cta-text button');
 ctaButton.innerHTML = siteContent['cta']['button'];
 
 //Main content 
-let featuresH4 = document.getElementsByTagName('h4')[0];
-featuresH4.innerHTML = "Features";
-let featureContent = document.getElementsByTagName('p')[0];
-featureContent.innerHTML = "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
-let aboutH4 = document.getElementsByTagName('h4')[1];
-aboutH4.innerHTML = "About";
-let aboutContent = document.getElementsByTagName('p')[1];
-aboutContent.innerHTML = "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
-let servicesH4 = document.getElementsByTagName('h4')[2];
-servicesH4.innerHTML = "Services";
-let servicesContent = document.getElementsByTagName('p')[2];
-servicesContent.innerHTML = "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
-let productH4 = document.getElementsByTagName('h4')[3];
-productH4.innerHTML = "Product"
-let productContent = document.getElementsByTagName('p')[3];
-productContent.innerHTML = "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
-let visionH4 = document.getElementsByTagName('h4')[4];
-visionH4.innerHTML = "Vision";
-let visionContent = document.getElementsByTagName('p')[4];
-visionContent.innerHTML = "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+let textContent = document.querySelectorAll('.text-content h4');
+let textContentP = document.querySelectorAll('.text-content p');
+
+textContent[0].innerHTML = siteContent['main-content']["features-h4"]
+textContentP[0].innerHTML = siteContent['main-content']["features-content"]
+
+textContent[1].innerHTML = siteContent['main-content']["about-h4"]
+textContentP[1].innerHTML = siteContent['main-content']["about-content"]
+
+textContent[2].innerHTML = siteContent['main-content']["services-h4"]
+textContentP[2].innerHTML = siteContent['main-content']["services-content"]
+
+textContent[3].innerHTML = siteContent['main-content']["product-h4"]
+textContentP[3].innerHTML = siteContent['main-content']["product-content"]
+
+textContent[4].innerHTML = siteContent['main-content']["vision-h4"]
+textContentP[4].innerHTML = siteContent['main-content']["vision-content"]
+
 
 //Contact info
 
